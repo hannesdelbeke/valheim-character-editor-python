@@ -1,8 +1,6 @@
 ### Summary
 
-This is a shameless lift and shift of byt3m's Valheim Character Editor that I reimplemented in python
-
-- https://github.com/byt3m/Valheim-Character-Editor
+Python port of [byt3m's Valheim Character Editor](https://github.com/byt3m/Valheim-Character-Editor)
 
 ### Usage
 
@@ -38,3 +36,7 @@ with open(save_path / "superme.fch", "wb") as f:
     character.dump(f)
 ```
 
+### inspiration
+- original, last update 2021, 0⭐ https://github.com/blakebjorn/valheim-character-editor-python
+- last update 2021, 2⭐https://github.com/PanTongLin/valheim-character-parser
+- archived 2021, 110⭐ https://github.com/byt3m/Valheim-Character-Editor
