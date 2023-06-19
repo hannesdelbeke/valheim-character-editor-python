@@ -40,6 +40,7 @@ class Item:
     variant = None
     crafter_id = None
     crafter_name = None
+    unknown = None
 
 
 class Character:
@@ -108,6 +109,7 @@ class Character:
             item.variant = self.get_int32()
             item.crafter_id = self.get_int64()
             item.crafter_name = self.get_string()
+            item.unknown = self.get_int32()  # todo figure out what this is
 
             if item.name:
                 self.inventory.append(item)
@@ -252,6 +254,7 @@ class Character:
                 temp_buffer.write(self.pack(item.variant))
                 temp_buffer.write(self.pack(item.crafter_id, 'q'))
                 temp_buffer.write(self.pack(item.crafter_name))
+                temp_buffer.write(self.pack(item.unknown))  # todo figure out what this is
 
             temp_buffer.write(self.pack(len(self.recipes)))
             for recipe in self.recipes:
